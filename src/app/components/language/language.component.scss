@@ -1,0 +1,47 @@
+.lang-container{
+  height: 110px;
+  width: 110px;
+  // background-color: rgb(216, 216, 216);   
+  background-color: #265b70;
+  color: black;
+  box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  
+
+  &:hover{
+    transform: scale(1.2);
+    z-index: 3;
+  }
+
+  .service-icon {
+    width: 70px!important;
+    height: 70px!important;
+  }
+
+  h5{
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+
+svg {
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  transform: rotate(-90deg);
+  animation: offsettozero 1s linear forwards;
+}
+
+@keyframes offsettozero {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+

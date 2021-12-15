@@ -1,0 +1,113 @@
+$font-color: beige;
+$first-choise: linear-gradient(to bottom, #265b70, #00A9A5,#265b70,#265b70,#01161E);
+$second-choise: linear-gradient(to right, #9A26FF, #d122c8);
+
+.content-section{
+    // background-color: #124559;
+    background: #265b70;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: $font-color;
+}
+
+carousel{
+    z-index: 1;
+    .card{
+        color: $font-color;
+        width: 310px;
+        height: 525px;
+        border-radius: 4rem 0.75rem 4rem 0.75rem;
+        padding: 0 4px;
+
+        &:hover{
+            transform: scale(1.05);
+            margin: 16px;
+        }
+
+        &-img-top{
+            border-top-left-radius: 3.75rem;
+            max-height: 200px;
+        }
+    
+        &-title{
+            padding: 12px 0;
+        }
+
+        &-text{
+            height: 124px;
+        }
+    }
+}
+
+.langs-container{
+    width: 100%;
+    place-content: center;
+
+    img{
+        padding: 0;
+        width: 45px!important;
+        height: 45px!important;
+    }
+}
+
+.project-title-container{
+    display: flex;
+}
+
+.project-logo{
+    margin-right: 0.5rem;
+    margin-left: -0.5rem;
+    margin-top: 0.5rem;
+    background-color: rgba($color: #000, $alpha: 0.2);
+    width: 35px!important;
+    height: 35px!important;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+    
+    &-github{
+        font-size: 20px;
+        background: rgb(43, 48, 56);
+        color: $font-color;
+    }
+    
+    &-eye{
+        font-size: 20px;
+        background: rgb(43, 48, 56);
+        color: $font-color;
+    }
+}
+
+.links{
+    place-content: center;
+    
+    hr{
+        margin: 0;
+    }
+}
+
+hr{
+    margin: 4px 0;
+}
