@@ -1,43 +1,26 @@
-<section class="content-section text-white text-center container-large pt-4 pb-3" id="projects">
-  <h1 class="mb-3"><strong>My Projects</strong></h1>
-  <carousel 
-  [height]="565" 
-  [cellsToShow]="cellToShow" 
-  [autoplay]="false" 
-  [pauseOnHover]="true" 
-  [dots]="true" 
-  [arrowsTheme]="'dark'" 
-  [counter]="false" >
-    <div class="carousel-cell" *ngFor="let project of projects">
-      <div class="container card bg-dark">
+<section class="text-center py-4" id="projects">
+  <h2 class="mb-4"><strong>My Projects</strong></h2>
+  <carousel [height]="565" [cellsToShow]="cellToShow" [autoplay]="false" [loop]="false"[arrowsTheme]="'dark'" [counter]="true"  >
+    <div class="card bg-dark carousel-cell" *ngFor="let project of projects">
+      <img class="card-img-top mt-1" src="../../assets/images/projects/{{project.title}}.png">
 
-        <img class="card-img-top mt-1" src="../../assets/images/projects/{{project.title}}.png">
-
-        <div class="card-body">
-          <div class="langs-container">
-            <img
-            *ngFor="let lang of splitLanguages(project.languages)"
-            class="mx-1 my-1"
-            src="../../assets/images/skills/{{lang}}.png"
-            title="{{lang}}" />
-          </div>
-
-          <hr>
-
-          <div class="project-title-container">
-            <img class="project-logo rounded-circle" src="../../assets/images/projects/{{project.title}} logo.png" alt="">
-            <h4 class="card-title">{{project.title}}</h4>
-          </div>
-
-          <p class="card-text">{{project.about}}</p>
-
-          <div class="row links">
-            <hr>
-            <a href="{{ splitLinks(project.links)[0] }}" title="See Code" target="_blank" class="fa fa-github" ></a>
-            <a href="{{ splitLinks(project.links)[1] }}" title="Take a look" target="_blank" class="fa fa-eye" ></a>
-          </div>
+      <div class="card-body">
+        <div class="card-skills">
+          <img *ngFor="let lang of splitLanguages(project.languages)" class="mx-1 my-1" src="../../assets/images/skills/{{lang}}.png" title="{{lang}}" />
         </div>
-      </div>    
+        <hr class="my-3">
+        <div class="card-title">
+          <img class="rounded-circle me-2" src="../../assets/images/projects/{{project.title}} logo.png" alt="{{project.title}}" title="{{project.title}}">
+          <h4>{{project.title}}</h4>
+        </div>
+        <p class="p-3 text-start">{{project.about}}</p>
+        <div class="row card-links">
+          <hr>
+          <a href="{{ splitLinks(project.links)[0] }}" title="See Code" target="_blank" class="fa fa-github" ></a>
+          <a href="{{ splitLinks(project.links)[1] }}" title="Take a look" target="_blank" class="fa fa-eye" ></a>
+        </div>
+      </div>
+      
     </div>
   </carousel>
 </section>
