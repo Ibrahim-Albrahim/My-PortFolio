@@ -1,107 +1,97 @@
 $icon-color: beige;
 
 .container-large{
-  // background: linear-gradient(to top, #01161E, #265b70,#265b70,#265b70,#122c36);
   background-color: #01161E;
-}
 
-.contact-body{
-  place-content: center;
-
-  @media only screen and (max-width: 600px){
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
+  h2 {
+      text-align: center;
+      font-weight: bold;
+      color: beige;
   }
-}
 
-.row>*{
-  @media only screen and (min-width: 600px){
-    width: 50%;
+  .contact-body{
+    place-content: center;
+
+    @media only screen and (max-width: 600px){
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .logos{
+      display: flex;
+      flex-wrap: wrap;  
+      place-content: center;
+
+      .fa {
+        padding: 20px;
+        font-size: 80px;
+        width: 125px;
+        height: 125px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+
+        &:active {
+          box-shadow: 4px -4px 6px 0px rgba(31, 31, 31, 0.6), -4px -4px 6px 0px rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0px rgba(53, 53, 53, 0.6), inset 4px 4px 6px 0px rgba(116, 125, 136, 0.3)
+        }
+        &:hover {
+          transform: scale(1.2);   
+        }
+
+        &-telegram {
+          background: $icon-color;
+          color: #007bb5;
+          font-size: 126px;
+        }
+        &-twitter {
+          background: #55ACEE;
+          color: $icon-color;
+        }
+        &-whatsapp {
+          background: #a4c639;
+          color: $icon-color;
+        }
+        &-snapchat-ghost {
+          background: #eee000;
+          color: $icon-color;
+          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        &-linkedin {
+          background: #007bb5;
+          color: $icon-color;
+        }
+        &-youtube {
+          background: #bb0000;
+          color: $icon-color;
+        }
+        &-instagram {
+          background: #125688;
+          color: $icon-color;
+        }
+        &-github{
+            font-size: 125px;
+          background: rgb(43, 48, 56);
+          color: $icon-color;
+        }
+        &-envelope{
+          background: #006b47;
+          color: $icon-color;
+        }
+      }
+    }
   }
-}
 
-.logos{
-  display: flex;
-  flex-wrap: wrap;  
-  place-content: center;
-}
-
-h1 {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    color: beige;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 80px;
-    width: 125px;
-    height: 125px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
-
-    &:active {
-      box-shadow: 4px -4px 6px 0px rgba(31, 31, 31, 0.6), -4px -4px 6px 0px rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0px rgba(53, 53, 53, 0.6), inset 4px 4px 6px 0px rgba(116, 125, 136, 0.3)
+  .row>*{
+    @media only screen and (min-width: 600px){
+      width: 50%;
     }
-    &:hover {
-      transform: scale(1.2);   
-    }
-  
-    &-telegram {
-      background: $icon-color;
-      color: #007bb5;
-      font-size: 126px;
-    }
-    
-    &-twitter {
-      background: #55ACEE;
-      color: $icon-color;
-    }
-  
-    &-whatsapp {
-      background: #a4c639;
-      color: $icon-color;
-    }
-  
-    &-snapchat-ghost {
-      background: #eee000;
-      color: $icon-color;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-  
-    &-linkedin {
-      background: #007bb5;
-      color: $icon-color;
-    }
-    
-    &-youtube {
-      background: #bb0000;
-      color: $icon-color;
-    }
-    
-    &-instagram {
-      background: #125688;
-      color: $icon-color;
-    }
-    
-    &-github{
-        font-size: 125px;
-      background: rgb(43, 48, 56);
-      color: $icon-color;
-    }
-    &-envelope{
-      background: #006b47;
-      color: $icon-color;
-    }
-}
-  
+  }
+}  
 
 

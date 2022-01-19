@@ -1,16 +1,10 @@
-<section class="container-large pt-5 pb-5" id="contact">
-    <h1><strong>Contact Me</strong></h1>
-    <div class="row contact-body">
-        <div class="logos  mt-3">
-            <a href="https://t.me/hemo7f12" target="_blank" class="fa fa-telegram"></a>
-            <a href="https://wa.me/966565091858" target="_blank" class="fa fa-whatsapp"></a>
-            <a href="https://twitter.com/hemo7f12" target="_blank" class="fa fa-twitter"></a>
-            <a href="mailto: hemo7f12@gmail.com" target="_blank" class="fa fa-envelope"></a>
-            <a href="https://www.snapchat.com/add/hemo7ss" target="_blank" class="fa fa-snapchat-ghost"></a>
-            <a href="https://www.instagram.com/hemo7f12/" target="_blank" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/ibrahim-albrahim-hemo7f12/" target="_blank" class="fa fa-linkedin"></a>
-            <a href="https://github.com/ibrahim-albrahim/" target="_blank" class="fa fa-github"></a>
+<section class="container-large py-4" id="contact">
+    <h2><strong>Contact Me</strong></h2>
+    <div class="row contact-body mt-4">
+        <div class="logos">
+            <a *ngFor="let contact of contacts" href="{{contact.link}}" target="_blank" ngClass="fa fa-{{contact.name}}"></a>
         </div>
         <app-contact-me></app-contact-me>
     </div>
+    <hr>
 </section>
