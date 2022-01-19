@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Skill } from '../../skill';
 
 @Component({
   selector: 'app-skills',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  skills: any[] = [
+  skills: Skill[] = [
     {'name': 'Python',       'style' :'275'},
     {'name': 'php',          'style' :'175'},
     {'name': 'Java',         'style' :'200'},
