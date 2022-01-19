@@ -1,17 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-*,
-*::before,
-*::after{
+*, *::before, *::after{
   box-sizing: border-box;
 }
 
 :root {
     overflow-x: hidden;
+    width: 100vw;
+    background-color: #01161E;
+    
     @media only screen and (max-width: 600px) {
       overflow-y: hidden,scroll;
     }
   }
 
+
+  /* ScrollBar Y */
   /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -23,11 +25,11 @@
   
   /* Handle */
   &-thumb {
-    background-color: rgba(153, 38, 240, 0.95); 
+    background-color: #265b70;
     border-radius: 12px;
 
     &:hover {
-      background-color: rgba(209, 34, 227, 0.95); 
+      background-color: #2e5564;
     }
   } 
 }
