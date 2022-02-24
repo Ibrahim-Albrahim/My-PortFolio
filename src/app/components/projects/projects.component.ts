@@ -16,12 +16,20 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
+
+    const cellsToShow = () => {
+      if (window.innerWidth < 600){this.cellToShow = 1;}
+      else if (window.innerWidth < 800){this.cellToShow = 2;}
+      else if (window.innerWidth < 1000){this.cellToShow = 3;}
+      else if (window.innerWidth > 1000){this.cellToShow = 4;}
+      else if (window.innerWidth > 2500){this.cellToShow = 5;}
+    }
+
     this.getProjects();
-    if (window.innerWidth < 600){this.cellToShow = 1;}
-    if (window.innerWidth > 600){this.cellToShow = 4;}
+    cellsToShow()
+    
     window.onresize = () => {
-      if (window.innerWidth < 600){this.cellToShow = 1;};
-      if (window.innerWidth > 600){this.cellToShow = 4;};
+      cellsToShow()
     }
   }
  

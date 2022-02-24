@@ -11,14 +11,19 @@ section{
     }
 
     carousel{
-        min-width: 100vw;
-        margin: 0 8px;
+        max-width: 1500px;
+        margin: 0 auto;
 
         .card{
             margin: 0 16px;
+            min-width: 340px;
             max-width: 340px;
             color: $font-color;
             border-radius: 4rem 0.75rem 4rem 0.75rem;
+            transition: box-shadow 300ms;
+            &:hover{
+                box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+            }
 
             &-img-top{
                 border-top-left-radius: 3.75rem;
@@ -58,6 +63,7 @@ section{
                     margin: 5px;
                     text-decoration: none;
                     border-radius: 50%;
+                    transition: transform 300ms , opacity 300ms;
 
                     &:hover {
                         opacity: 0.7;

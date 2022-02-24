@@ -1,4 +1,5 @@
 $icon-color: beige;
+$icon-size: 80px;
 
 .container-large{
   background-color: #01161E;
@@ -10,6 +11,8 @@ $icon-color: beige;
   }
 
   .contact-body{
+    max-width: 1500px;
+    margin: 0 auto;
     place-content: center;
 
     @media only screen and (max-width: 600px){
@@ -24,62 +27,76 @@ $icon-color: beige;
       place-content: center;
 
       .fa {
-        padding: 20px;
-        font-size: 80px;
-        width: 125px;
-        height: 125px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 50%;
-        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 20px rgba(31, 31, 31, 0.6), 7px 7px 20px 0px #0001, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px rgba(48, 48, 48, 0.6), inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+        overflow: hidden;
+        width: 125px;
+        height: 125px;
+        margin: 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        box-shadow: 4px -4px 6px 0px rgba(31, 31, 31, 0.6), -4px -4px 6px 0px rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0px rgba(53, 53, 53, 0.6), inset 4px 4px 6px 0px rgba(116, 125, 136, 0.3);
+        transition: transform 300ms , font-size 500ms;
 
-        &:active {
-          box-shadow: 4px -4px 6px 0px rgba(31, 31, 31, 0.6), -4px -4px 6px 0px rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0px rgba(53, 53, 53, 0.6), inset 4px 4px 6px 0px rgba(116, 125, 136, 0.3)
+        &:focus {
+          outline: none;
+          transform: scale(1.2);
         }
         &:hover {
-          transform: scale(1.2);   
+          transform: scale(1.2);
+          font-size: 95px;
         }
 
         &-telegram {
+          font-size: 126px;
           background: $icon-color;
           color: #007bb5;
-          font-size: 126px;
+          &:hover{
+            font-size: 170px!important;
+          }
+        }
+        &-github{
+          font-size: 135px;
+          background: #01161E;
+          color: $icon-color;
+          &:hover{
+            font-size: 160px!important;
+          }
         }
         &-twitter {
+          font-size: $icon-size;
           background: #55ACEE;
           color: $icon-color;
         }
         &-whatsapp {
+          font-size: $icon-size;
           background: #a4c639;
           color: $icon-color;
         }
         &-snapchat-ghost {
+          font-size: $icon-size;
           background: #eee000;
           color: $icon-color;
-          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
         &-linkedin {
+          font-size: $icon-size;
           background: #007bb5;
           color: $icon-color;
         }
         &-youtube {
+          font-size: $icon-size;
           background: #bb0000;
           color: $icon-color;
         }
         &-instagram {
+          font-size: $icon-size;
           background: #125688;
           color: $icon-color;
         }
-        &-github{
-            font-size: 125px;
-          background: rgb(43, 48, 56);
-          color: $icon-color;
-        }
         &-envelope{
+          font-size: $icon-size;
           background: #006b47;
           color: $icon-color;
         }

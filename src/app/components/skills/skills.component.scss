@@ -1,13 +1,9 @@
-$first-choise: linear-gradient(to top, #265b70, #00A9A5, #00A9A5,#265b70);
-$second-choise: linear-gradient(to bottom, #01161E, #265b70,#265b70,#265b70);
-
 .content-section {
   margin-top: -5%;
   padding-bottom: 3.5rem;
   display: grid;
   position: relative;
   z-index: 3;
-  // background-color: #01161E;
   background: #01161E;
   width: 100vw;
 
@@ -33,6 +29,7 @@ $second-choise: linear-gradient(to bottom, #01161E, #265b70,#265b70,#265b70);
       z-index: 2;
       position: relative;
       margin-left: -2.1%!important;
+      transition: transform 100ms;
 
       &:hover{
         transform: scale(1.2);

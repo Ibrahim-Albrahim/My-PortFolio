@@ -1,29 +1,89 @@
 .contact-me-form{
     width: 95%;
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    border-radius: 4rem;
-    padding: 24px;
+    background-color: #265b70;
+    border-radius: 3rem;
+    padding: 2rem 1.5rem 1rem 1.5rem;
     display: grid;
     color: beige;
     font-weight: 700;
 
     @media only screen and (max-width: 600px) {
-        margin-left: 2%;
+        margin-top: 1rem;
+
+        .form-group{
+            margin-bottom: 2rem;
+            margin-top: 0!important;
+        }
     }
 
-    input , textarea{
-        background-color: beige;
+    .form-group{
+        position: relative;
+        z-index: 1;
+
+        .form-control{
+            width: 100%;
+            height: 100%;
+            background-color: beige;
+            border-radius: 0.75rem;
+            transition: transform 300ms;
+            font-weight: bold;
+            
+            &:hover{
+                transform: scale(1.05);
+            }
+            
+            &:focus + label span , &:valid + label span {
+                transform: translateY(-125%);
+                font-size: 14px;
+                left: -0.75rem;
+                color: beige;
+            }
+        }
+        textarea:hover{
+            transform: scale(1.02)!important;
+        }
+        label {
+            z-index: 2;
+            position: absolute;
+            top: 0.3rem;
+            left: 1.5rem;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            span {
+                position: absolute;
+                color: rgba($color: #000000, $alpha: 0.3);
+                transition: all 300ms ease;
+            }
+        }
     }
 
-    button{
-        padding: 0.8375rem 1.25rem 0.8375rem 1.25rem;
-        font-weight: 700;
+    button {
+        position: relative;
+        margin: 0 auto;
+        padding: 0.75rem 3.5rem 0.75rem 2rem;
+        font-weight: bold;
         border: 0.1rem solid rgba(255, 255, 255, 0.6);
         background-color: beige;
+        transition: color 300ms , background-color 300ms;
 
         &:hover {
-            background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-            color: #fff;
+            background-color:rgba(153, 38, 240, 0.95);
+            & , & fa-icon{
+                color: #fff;
+            }
+        }
+        
+        fa-icon{
+            position: absolute;
+            color: #265b70;
+            font-size: x-large;
+            width: 2rem;
+            height: 2rem;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            transition: color 300ms;
         }
     }
 }

@@ -4,8 +4,15 @@
     font-size: 24px;
     z-index: 10;
 
+    .nav-link{
+        transition: transform 300ms;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
     a { 
-        color: rgba(245, 245, 220,0.5)
+        color: rgba(245, 245, 220,0.5);
+        transition: color 300ms;
     }
 
     &-brand{
@@ -21,6 +28,7 @@
         right: 20px;
         display: none;
         background-color: #01161E;
+        transition: opacity 300ms , transform 300ms;
 
         &:hover{
             opacity: 1;
