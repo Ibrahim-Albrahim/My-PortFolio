@@ -2,6 +2,7 @@
   margin-top: -5%;
   padding-bottom: 3.5rem;
   display: grid;
+  place-items: center;
   position: relative;
   z-index: 3;
   background: #01161E;
@@ -14,6 +15,7 @@
 
   .skills-container{
     place-content: center;
+    max-width: 90vw;
 
     .skill{
       height: 110px;
@@ -64,23 +66,19 @@
   }
 }
 
-@media only screen and(max-width:1000px) {
+@media only screen and(max-width:600px) {
   .content-section{
-    margin-top: -3%;
-    width: 100vw;
-    padding: 5% 10%;
+    padding-top: 1.5rem;
+    gap: 2rem;
   }
 
   .skills-container{
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 7%;
-    width: 100%;
+    margin-left: -3rem;
+    max-width: 80vw!important;
 
     .skill{
       margin-top: -10%!important;
       margin-right: -10%!important;
-      
     }
   }
 

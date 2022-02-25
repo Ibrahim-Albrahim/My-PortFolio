@@ -8,9 +8,10 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
     
     .about-me{
         max-width: 1500px;
-        margin: 0 auto;
+        margin: auto;
         
         .text-start{
+            max-width: 80vw;
             z-index: 3;
             position: relative;
             padding: 0 0 0 4rem;
@@ -30,40 +31,42 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
                 }
             }
             
-            .btn-rounded {
-                position: relative;
-                padding: 1rem 3.5rem 1rem 1rem;
-                font-weight: bold;
-                border: 0.1rem solid rgba(255, 255, 255, 0.6);
-                background-color: beige;
-                display: block;
-
-                transition: color 300ms , background-color 300ms;
-                &:hover {
-                    background-color:rgba(153, 38, 240, 0.95);
-                    color: #fff;
-                }
+            a.nav-link{
+                width: fit-content;
                 
-                span {
-                    position: absolute;
-                    background-color: #265b70;
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    top: 50%;
-                    right: 5px;
-                    display: grid;
-                    place-items: center;
-                    transform: translateY(-50%);
-                    border-radius: 50%;
-                }
-                
-                fa-icon{
-                    position: absolute;
-                    color: beige;
-                    font-size: xx-large;
+                .btn-rounded {
+                    position: relative;
+                    padding: 1rem 3.5rem 1rem 1rem;
+                    font-weight: bold;
+                    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+                    background-color: beige;
+    
+                    transition: color 300ms , background-color 300ms;
+                    &:hover {
+                        background-color:rgba(153, 38, 240, 0.95);
+                        color: #fff;
+                    }
+                    
+                    span {
+                        position: absolute;
+                        background-color: #265b70;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        top: 50%;
+                        right: 5px;
+                        display: grid;
+                        place-items: center;
+                        transform: translateY(-50%);
+                        border-radius: 50%;
+    
+                        fa-icon{
+                            position: absolute;
+                            color: beige;
+                            font-size: xx-large;
+                        }
+                    }
                 }
             }
-            
         }
         
         .my-img{
@@ -89,7 +92,7 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
             margin-top: -25%;
             
             .text-start{
-                max-width: 90vw;
+                max-width: 95vw;
             }
             
             .display-5{
@@ -104,7 +107,7 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
                 position: relative;
                 height: 30rem;
                 opacity: 95%;
-                margin-top: -7%;
+                margin-top: 1.5%;
                 margin-bottom: -32%;
             }
             
@@ -115,9 +118,30 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
             .text-start{
                 position: absolute;
                 margin-top: 25%;
-                margin-left: 0;
+                margin-left: 5%;
+
+                .btn-rounded{
+                    padding: 0.5rem 2.25rem 0.5rem 0.5rem!important;
+                    font-size: 0.75rem;
+                    
+                    span {
+                        width: 1.5rem!important;
+                        height: 1.5rem!important;
+                        
+                        fa-icon{
+                            font-size: 1rem!important;
+                        }
+                    }
+                }
             }
-            
+        }
+        @media only screen and (max-width:400px) {
+            .my-img{
+                margin-top: -7%;
+            }
+            .text-start{
+                margin-left: 2.5%;
+            }
         }
     }
     .intro-shape{
@@ -125,3 +149,5 @@ $second-choise: linear-gradient(to bottom, #9A26FF,#d122c8,#d122c8, #01161E);
         z-index: 2;
     }
 }
+
+
