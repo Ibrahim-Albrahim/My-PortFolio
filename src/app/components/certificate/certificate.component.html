@@ -1,0 +1,13 @@
+<a (click)="openModal(content)" >My Certificates</a>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title"><strong>My Certificates</strong></h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <carousel  [cellsToShow]="1" [autoplay]="false" [loop]="false" [arrowsTheme]="'light'" [counter]="true" >
+            <img *ngFor="let certificate of certificates" class="carousel-cell" src="../../../assets/images/certificates/{{certificate.path}}.jpg" alt=""> -->
+        </carousel>
+    </div>
+</ng-template>

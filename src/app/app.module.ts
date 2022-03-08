@@ -13,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { CertificateComponent } from './components/certificate/certificate.component';
 import { HomeComponent } from './routes/home/home.component';
 
 
@@ -26,6 +27,7 @@ import { HomeComponent } from './routes/home/home.component';
     AboutMeComponent,
     ContactComponent,
     ContactMeComponent,
+    CertificateComponent,
     HomeComponent,
   ],
   imports: [

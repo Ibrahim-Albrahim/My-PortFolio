@@ -1,0 +1,29 @@
+$background-color: #01161E;
+
+.modal-header{
+    padding-inline: 2rem;
+    background-color: $background-color;
+    color: beige;
+
+    .btn-close{
+        background-color: red;
+    }
+}
+
+.modal-body{
+    background-color: $background-color;
+
+    .carousel{
+        min-width: 200px;
+        max-width: 1500px;
+        min-height: 600px;
+        max-height: 600px;
+        
+        @media only screen and(max-width: 600px) {
+            min-height: 300px;
+        }
+        img{
+            object-fit: contain;
+        }
+    }
+}
