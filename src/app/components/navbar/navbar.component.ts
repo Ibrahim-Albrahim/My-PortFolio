@@ -67,9 +67,9 @@ export class NavbarComponent implements OnInit {
         document.body.scrollTop > 10 ||
         document.documentElement.scrollTop > 10
       ) {
-        mybutton.style.display = "block";
+        mybutton.style.opacity = "0.7";
       } else {
-        mybutton.style.display = "none";
+        mybutton.style.opacity = "0";
       }
     }
 
