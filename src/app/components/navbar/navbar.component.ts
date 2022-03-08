@@ -40,22 +40,24 @@ export class NavbarComponent implements OnInit {
       }else{this.navContact = false}
 
     }
+  @HostListener("window:resize",[])
+  onWindowResize(){
+    this.controlNavbar()
+  }
 
-    @HostListener("window:resize",[])
-    onWindowResize(){
-      if (window.innerWidth < 1000){this.stickyNav = "";}
-      if (window.innerWidth > 1000){this.stickyNav = " fixed-top";}
-    }
-  
   ngOnInit(): void {
     this.scrollToTopF()
+    this.controlNavbar()
+  }
+
+  controlNavbar () {
     if (window.innerWidth < 1000){this.stickyNav = "";}
     if (window.innerWidth > 1000){this.stickyNav = " fixed-top";}
   }
+
   
   scrollToTopF(){
     const mybutton = document.getElementById("btn-back-to-top")!;
-
     window.onscroll = function () {
       scrollFunction();
     };
@@ -76,5 +78,4 @@ export class NavbarComponent implements OnInit {
       document.documentElement.scrollTop = 0;
     });
   }
-  
 }
