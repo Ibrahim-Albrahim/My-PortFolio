@@ -1,16 +1,16 @@
 <section class="text-center py-4" id="projects">
   <h2 class="mb-4"><strong>My Projects</strong></h2>
-  <carousel [height]="565" [cellsToShow]="cellToShow" [autoplay]="false" [loop]="false"[arrowsTheme]="'dark'" [counter]="true"  >
+  <carousel [height]="565" [cellsToShow]="cellToShow" [autoplay]="false" [loop]="false" [arrowsTheme]="'dark'" [counter]="true"  >
     <div class="card bg-dark carousel-cell" *ngFor="let project of projects">
-      <img class="card-img-top mt-1" src="../../assets/images/projects/{{project.title}}.png">
+      <img class="card-img-top mt-1" src="../../assets/images/projects/{{project.title}}.png" alt="{{project.title}} image">
 
       <div class="card-body">
         <div class="card-skills">
-          <img *ngFor="let lang of splitLanguages(project.languages)" class="mx-1 my-1" src="../../assets/images/skills/{{lang}}.png" title="{{lang}}" />
+          <img *ngFor="let lang of splitLanguages(project.languages)" class="mx-1 my-1" src="../../assets/images/skills/{{lang}}.png" title="{{lang}}" alt="{{lang}} is used in this project"/>
         </div>
         <hr class="my-3">
         <div class="card-title">
-          <img class="rounded-circle me-2" src="../../assets/images/projects/{{project.title}} logo.png" alt="{{project.title}}" title="{{project.title}}">
+          <img class="rounded-circle me-2" src="../../assets/images/projects/{{project.title}} logo.png" alt="project title: {{project.title}}" title="{{project.title}}">
           <h4>{{project.title}}</h4>
         </div>
         <p class="p-3 text-start">{{project.about}}</p>

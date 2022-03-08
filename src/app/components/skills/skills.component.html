@@ -2,7 +2,7 @@
     <h2 class="pb-4"><strong>My Skills</strong></h2>
     <div class="skills-container row">
         <div class="rounded-circle skill" *ngFor="let skill of skills" >
-            <img class="service-icon rounded-circle" src="../../../assets/images/skills/{{skill.name}}.png"/>
+            <img class="service-icon rounded-circle" src="../../../assets/images/skills/{{skill.name}}.png" alt="image for skill {{skill.name}}"/>
             <h5><strong>{{skill.name}}</strong></h5>
             <svg [ngStyle]="{'stroke-dasharray':skill.style, 'stroke-dashoffset':skill.style}" height="100" width="100" fill-opacity="0"><circle cx="50" cy="50" r="55" stroke="wheat" stroke-width="1.5" /></svg> 
         </div>
