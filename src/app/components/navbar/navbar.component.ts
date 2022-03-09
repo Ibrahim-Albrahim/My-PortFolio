@@ -12,7 +12,6 @@ export class NavbarComponent implements OnInit {
   navProjects = false;
   navContact = false;
   activeNav = " active";
-  stickyNav = " fixed-top"
 
   constructor() {}
   @HostListener("window:scroll", [])
@@ -40,21 +39,10 @@ export class NavbarComponent implements OnInit {
       }else{this.navContact = false}
 
     }
-  @HostListener("window:resize",[])
-  onWindowResize(){
-    this.controlNavbar()
-  }
 
   ngOnInit(): void {
     this.scrollToTopF()
-    this.controlNavbar()
   }
-
-  controlNavbar () {
-    if (window.innerWidth < 1000){this.stickyNav = "";}
-    if (window.innerWidth > 1000){this.stickyNav = " fixed-top";}
-  }
-
   
   scrollToTopF(){
     const mybutton = document.getElementById("btn-back-to-top")!;

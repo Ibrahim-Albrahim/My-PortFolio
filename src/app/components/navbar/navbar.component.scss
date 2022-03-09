@@ -3,10 +3,11 @@
     font-weight: bold;
     font-size: 24px;
     z-index: 10;
+    padding-inline: 1rem;
     
     .nav-link{
         transition: transform 300ms;
-        &:hover{
+        &:hover , &.active{
             transform: scale(1.1);
         }
     }
@@ -29,6 +30,10 @@
         background-color: beige;
         transition: opacity 300ms , transform 300ms , background-color 300ms;
         
+        @media only screen and(max-width: 600px) {
+            right: 0;
+        }
+        
         &:hover{
             background-color:rgba(153, 38, 240, 0.95);
             opacity: 1!important;
@@ -45,5 +50,4 @@
             transition: color 300ms;
         }
     }
-    
 }
