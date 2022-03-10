@@ -28,12 +28,12 @@ export class NavbarComponent implements OnInit {
         this.nabSkills = true;
       }else{this.nabSkills = false;}
 
-      if (yPosition > 650){
+      if (yPosition > 800){
           this.nabSkills = false;
           this.navProjects = true;
       }else{this.navProjects = false;}
 
-      if (yPosition > 1100){
+      if (yPosition > 1250){
         this.navProjects = false;
         this.navContact = true;
       }else{this.navContact = false}
