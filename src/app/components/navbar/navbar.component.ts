@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
           this.navProjects = true;
       }else{this.navProjects = false;}
 
-      if (yPosition > 1250){
+      if (yPosition > 1500){
         this.navProjects = false;
         this.navContact = true;
       }else{this.navContact = false}
